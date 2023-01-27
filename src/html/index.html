@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('./chunk/head.html', {
+"title": "Portfolio",
+"description": "Simple portfolio site with React JS."
+})
+
+<body class="projects">
+	@@include('./chunk/header.html', {'page': 'projects'})
+
+	<main class="main">
+		<div class="greetings projects__greetings">
+			<div class="container">
+				<div class="greetings__content">
+					<p class="greetings__text greetings__text--big">
+						Hi, my name is <span class="greetings__text--accent">Yuri</span>
+					</p>
+					<p class="greetings__text greetings__text--medium">a frontend developer</p>
+					<p class="greetings__text greetings__text--small">with passion for learning and creating.</p>
+					<button class="greetings__btn" type="button">Download CV</button>
+				</div>
+			</div>
+		</div>
+
+		<section class="portfolio projects__portfolio">
+			<div class="container">
+				<h1 class="title portfolio__title">Projects</h1>
+				<ul class="portfolio__list">
+					<li class="portfolio__item">
+						<a class="portfolio__item-link" href="#">
+							<picture>
+								<source srcset="./img/content/portfolio/work-1-small.webp" type="image/webp">
+								<img class="portfolio__item-img" src="./img/content/portfolio/work-1-small.jpg" alt="work">
+							</picture>
+
+							<h2 class="portfolio__item-title">Gaming streaming portal</h2>
+						</a>
+					</li>
+
+					<li class="portfolio__item">
+						<a class="portfolio__item-link" href="#">
+							<picture>
+								<source srcset="./img/content/portfolio/work-2-small.webp" type="image/webp">
+								<img class="portfolio__item-img" src="./img/content/portfolio/work-2-small.jpg" alt="work">
+							</picture>
+
+							<h2 class="portfolio__item-title">Video service</h2>
+						</a>
+					</li>
+
+					<li class="portfolio__item">
+						<a class="portfolio__item-link" href="#">
+							<picture>
+								<source srcset="./img/content/portfolio/work-3-small.webp" type="image/webp">
+								<img class="portfolio__item-img" src="./img/content/portfolio/work-3-small.jpg" alt="work">
+							</picture>
+
+							<h2 class="portfolio__item-title">Video portal</h2>
+						</a>
+					</li>
+
+					<li class="portfolio__item">
+						<a class="portfolio__item-link" href="#">
+							<picture>
+								<source srcset="./img/content/portfolio/work-4-small.webp" type="image/webp">
+								<img class="portfolio__item-img" src="./img/content/portfolio/work-4-small.jpg" alt="work">
+							</picture>
+
+							<h2 class="portfolio__item-title">Dating app</h2>
+						</a>
+					</li>
+
+					<li class="portfolio__item">
+						<a class="portfolio__item-link" href="#">
+							<picture>
+								<source srcset="./img/content/portfolio/work-5-small.webp" type="image/webp">
+								<img class="portfolio__item-img" src="./img/content/portfolio/work-5-small.jpg" alt="work">
+							</picture>
+
+							<h2 class="portfolio__item-title">Landing</h2>
+						</a>
+					</li>
+
+					<li class="portfolio__item">
+						<a class="portfolio__item-link" href="#">
+							<picture>
+								<source srcset="./img/content/portfolio/work-6-small.webp" type="image/webp">
+								<img class="portfolio__item-img" src="./img/content/portfolio/work-6-small.jpg" alt="work">
+							</picture>
+
+							<h2 class="portfolio__item-title">Gaming community</h2>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+	@@include('./chunk/footer.html')
+
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>

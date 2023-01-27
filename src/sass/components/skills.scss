@@ -1,0 +1,21 @@
+.skills {
+	&__title {
+		margin-top: $margin-block;
+		margin-bottom: 40px;
+	}
+
+	&__box {
+		max-width: 570px;
+		margin: 0 auto 40px;
+
+		text-align: center;
+	}
+
+	&__subtitle {
+		margin-bottom: 20px;
+	}
+
+	&__text + &__text {
+		margin-top: .8em;
+	}
+}

@@ -1,0 +1,162 @@
+.greetings {
+	margin-bottom: $margin-block;
+	background-color: $color-surface;
+	border: 1px solid $color-border;
+
+	&__content {
+		padding: 148px 0 40px;
+		margin: 33px 0;
+		min-height: 628px;
+
+		background: center / contain no-repeat url("./../img/abstract-bg.svg");
+	}
+
+	&__text {
+		color: $color-text-banner;
+		text-align: center;
+
+		&--big {
+			font-size: 60px;
+			font-weight: 700;
+			line-height: 1.4;
+		}
+
+		&--medium {
+			margin-bottom: 13px;
+
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 1.4;
+		}
+
+		&--small {
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 24px;
+		}
+
+		&--accent {
+			color: $color-text-accent;
+		}
+	}
+
+	&__btn {
+		display: block;
+		padding: 12px 29px;
+		margin: 40px auto 0;
+
+		font-size: 16px;
+		font-weight: 500;
+		color: $color-btn-text;
+
+		background-color: $color-btn-bg;
+		border-radius: 5px;
+
+		transition: all 0.3s ease;
+
+		&:hover,
+		&:focus {
+			background-color: $color-btn-bg--hover;
+		}
+
+		&:active {
+			transform: scale(0.95);
+		}
+	}
+}
+
+.portfolio {
+	margin-bottom: $margin-block;
+
+	&__title {
+		margin-bottom: 60px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+	}
+
+	&__item {
+		@extend %shadow;
+
+		max-width: 370px;
+
+		border-radius: 10px;
+
+		&:hover {
+			color: $color-text-link--hover;
+			box-shadow: 0 5px 35px $color-shadow, inset 0 0 10px -5px $color-shadow--hover;
+			background-color: $color-bg--hover;
+		}
+	}
+
+	&__item-img {
+		width: 100%;
+		border-radius: 10px;
+
+		position: relative;
+		z-index: -1;
+	}
+
+	&__item-title {
+		padding: 15px 20px 25px;
+
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.3;
+	}
+}
+
+@include lg {
+	.greetings__content {
+		padding: 40px 0;
+		display: flex;
+		flex-direction: column;
+		min-height: auto;
+	}
+
+	.portfolio__item-title {
+		text-align: center;
+	}
+}
+
+@include media('900px') {
+	.portfolio__list {
+		grid-template-columns: repeat(2,1fr);
+		justify-items: center;
+	}
+}
+
+@include md {
+	.portfolio__item-title {
+		font-size: 20px;
+	}
+}
+
+@include media('600px') {
+	.greetings__text--big {
+		font-size: 48px;
+	}
+
+	.greetings__text--medium {
+		font-size: 34px;
+	}
+}
+
+@include sm {
+	.greetings__text--big {
+		font-size: 36px;
+	}
+
+	.greetings__text--medium {
+		margin-bottom: 6px;
+
+		font-size: 28px;
+	}
+
+	.portfolio__list {
+		grid-template-columns: repeat(1,1fr);
+	}
+}

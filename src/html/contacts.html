@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('./chunk/head.html', {
+"title": "Contacts",
+"description": "Simple portfolio site with React JS."
+})
+
+<body>
+	@@include('./chunk/header.html', {'page': 'contacts'})
+
+	<main class="main">
+		<section class="contacts">
+			<div class="container">
+				<h1 class="title contacts__title">Contacts</h1>
+
+				<div class="box contacts__box">
+					<h2 class="subtitle contacts__subtitle">Location</h2>
+					<p class="contacts__text">Moscow, Russia</p>
+				</div>
+
+				<div class="box contacts__box">
+					<h2 class="subtitle contacts__subtitle">Telegram / WhatsApp</h2>
+					<p class="contacts__text">+7 (905) 123-45-67</p>
+				</div>
+
+				<div class="box contacts__box">
+					<h2 class="subtitle contacts__subtitle">Email</h2>
+					<a class="contacts__link" href="mailto:webdev@protonmail.com">webdev@protonmail.com</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	@@include('./chunk/footer.html')
+
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>

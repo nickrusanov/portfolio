@@ -1,0 +1,48 @@
+.footer {
+	padding: 60px 0 50px;
+
+	background-color: $color-surface;
+
+	&__social {
+		margin-bottom: 28px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: 30px;
+	}
+
+	&__social-link {
+		@extend %trans;
+
+		&:hover {
+			transform: scale(1.15);
+		}
+
+		&:active {
+			transform: scale(1);
+		}
+	}
+
+	&__social-icon {
+		path {
+			fill: $color-icon-footer;
+		}
+	}
+
+	&__copyright {
+		font-size: 16px;
+		text-align: center;
+		color: $color-text-footer;
+	}
+}
+
+@include lg {
+	.footer__social-link {
+		padding: 10px;
+	}
+
+	.footer {
+		padding: 30px 0;
+	}
+}

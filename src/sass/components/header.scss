@@ -1,0 +1,126 @@
+.header {
+	color: $color-text-header;
+	background-color: $color-surface;
+
+	&__inner {
+		padding: 20px 0;
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+
+		position: relative;
+	}
+
+	&__logo {
+		font: 24px/1 $font-secondary;
+
+		&--bold {
+			font-weight: 700;
+		}
+	}
+
+	&__nav {
+		width: 100%;
+		max-width: 260px;
+	}
+
+	&__nav-list {
+		display: flex;
+		justify-content: space-between;
+		gap: 15px;
+	}
+
+	&__nav-link {
+		font: 16px/1.5 $font-secondary;
+		font-weight: 500;
+
+		transition: all .3s ease;
+
+		&--active {
+			position: relative;
+
+			&::after {
+				content: "";
+				width: 100%;
+				height: 3px;
+
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+
+				background: $color-border-menu;
+			}
+		}
+
+		&:hover {
+			text-shadow: 0 0 10px $color-text-header;
+		}
+	}
+
+	&__lightmode-btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 5px;
+		height: 26px;
+		min-width: 52px;
+
+		position: relative;
+
+		background-color: $color-lightmode-bg;
+		border-radius: 13px;
+
+		&::after {
+			@extend %trans;
+
+			content: '';
+			width: 24px;
+			height: 24px;
+
+			position: absolute;
+			left: 1px;
+			top: 1px;
+
+			border-radius: 12px;
+			background-color: $color-lightmode-bg--active;
+		}
+
+		&--darkmode::after {
+			left: 27px;
+		}
+	}
+
+	&__lightmode-svg {
+
+		position: relative;
+		z-index: 2;
+
+		path {
+			fill: $color-lightmode-icon;
+		}
+	}
+}
+
+@include media('600px') {
+	.header__inner {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.header__lightmode-btn {
+		position: absolute;
+		right: 0;
+	}
+}
+
+@include media('420px') {
+	.header__logo {
+		max-width: 200px;
+		text-align: center;
+	}
+
+	.header__lightmode-btn {
+		top: 30px;
+	}
+}
